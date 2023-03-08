@@ -1,4 +1,4 @@
-package uli.nick.main;
+package main;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

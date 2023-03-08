@@ -1,4 +1,4 @@
-package uli.nick.main;
+package main;
 
 public class Parrot {
 
