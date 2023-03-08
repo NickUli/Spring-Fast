@@ -65,13 +65,14 @@ public class AppTests {
     }
 
     @Test
-    @DisplayName("Test that the Parrot instance parrot3 is primary")
+    @DisplayName("Test that the Car instance has the name Fiat")
     public void testCarIsNull() {
         Car car = context.getBean(Car.class);
 
         String actual = car.getName();
+        String expected = "Fiat";
 
-        then(actual).isNull();
+        then(actual).isEqualTo(expected);
     }
 
     @Test
