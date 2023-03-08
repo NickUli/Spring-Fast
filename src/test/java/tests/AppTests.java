@@ -1,6 +1,7 @@
 package tests;
 
 import config.ProjectConfig;
+import main.Car;
 import main.Parrot;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -61,6 +62,16 @@ public class AppTests {
         String expected = "Riki";
 
         then(actual).isEqualTo(expected);
+    }
+
+    @Test
+    @DisplayName("Test that the Parrot instance parrot3 is primary")
+    public void testCarIsNull() {
+        Car car = context.getBean(Car.class);
+
+        String actual = car.getName();
+
+        then(actual).isNull();
     }
 
     @Test

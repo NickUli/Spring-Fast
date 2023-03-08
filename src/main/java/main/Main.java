@@ -20,6 +20,10 @@ public class Main {
         Parrot parrot = context.getBean(Parrot.class);
         System.out.println(parrot.getName());
 
+        Car car = context.getBean(Car.class);
+        System.out.println(car);
+        System.out.println(car.getName());
+
         String string = context.getBean(String.class);
         System.out.println(string);
 
