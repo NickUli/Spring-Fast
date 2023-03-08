@@ -17,6 +17,9 @@ public class Main {
         Parrot parrot3 = context.getBean("parrot3", Parrot.class);
         System.out.println(parrot3.getName());
 
+        Parrot parrot = context.getBean(Parrot.class);
+        System.out.println(parrot.getName());
+
         String string = context.getBean(String.class);
         System.out.println(string);
 

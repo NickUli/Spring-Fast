@@ -11,7 +11,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.assertj.core.api.BDDAssertions.then;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {ProjectConfig.class})
@@ -46,6 +45,17 @@ public class AppTests {
     @DisplayName("Test that Parrot instance named parrot3 has the name Riki.")
     public void testParrot3HasTheNameRiki() {
         Parrot parrot = context.getBean("parrot3", Parrot.class);
+
+        String actual = parrot.getName();
+        String expected = "Riki";
+
+        then(actual).isEqualTo(expected);
+    }
+
+    @Test
+    @DisplayName("Test that the Parrot instance parrot3 is primary")
+    public void testParrot3IsPrimary() {
+        Parrot parrot = context.getBean(Parrot.class);
 
         String actual = parrot.getName();
         String expected = "Riki";
