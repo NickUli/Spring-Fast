@@ -3,8 +3,6 @@ package main;
 import config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.time.format.SignStyle;
-
 public class Main {
 
     public static void main(String[] args) {
