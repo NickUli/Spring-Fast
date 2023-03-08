@@ -13,4 +13,14 @@ public class ProjectConfig {
         parrot.setName("Koko");
         return parrot;
     }
+
+    @Bean
+    String hello() {
+        return "Hello";
+    }
+
+    @Bean
+    Integer ten() {
+        return 10;
+    }
 }
