@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class ProjectConfig2 {
 
     @Bean
-    public Monkey monkey() {
+    public Monkey abu() {
         System.out.println("Create bin monkey {START");
         Monkey monkey = new Monkey();
         monkey.setName("Abu");
@@ -20,11 +20,11 @@ public class ProjectConfig2 {
     }
 
     @Bean
-    public Person person(Monkey monkey) {
+    public Person alibaba(Monkey abu) {
         System.out.println("Create bin person {START");
         Person person = new Person();
         person.setName("Alibaba");
-        person.setMonkey(monkey);
+        person.setMonkey(abu);
         System.out.println("END}");
         return person;
     }

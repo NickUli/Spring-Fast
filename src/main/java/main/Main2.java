@@ -10,8 +10,8 @@ public class Main2 {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig2.class);
 
-        Person person = context.getBean(Person.class);
-        Monkey monkey = context.getBean(Monkey.class);
+        Person person = context.getBean("alibaba", Person.class);
+        Monkey monkey = context.getBean("abu", Monkey.class);
 
         System.out.println("Person`s name: " + person.getName());
         System.out.println("Monkey`s name: " + monkey.getName());
