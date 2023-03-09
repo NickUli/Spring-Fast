@@ -3,6 +3,8 @@ package main;
 import config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.function.Supplier;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -23,6 +25,13 @@ public class Main {
         Car car = context.getBean(Car.class);
         System.out.println(car);
         System.out.println(car.getName());
+
+        Car superCar = new Car();
+        superCar.setName("Ferrari");
+        Supplier<Car> carSupplier = () -> superCar;
+        context.registerBean("ferrari", Car.class, carSupplier, bc -> bc.setPrimary(true));
+        Car ferrariCar = context.getBean("ferrari", Car.class);
+        System.out.println(ferrariCar.getName());
 
         String string = context.getBean(String.class);
         System.out.println(string);
