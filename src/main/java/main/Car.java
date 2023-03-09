@@ -9,9 +9,14 @@ public class Car {
 
     String name;
 
+    public Car() {
+        System.out.println("Create obj Car");
+    }
+
     @PostConstruct
     public void init() {
         this.name = "Fiat";
+        System.out.println("Run post construct");
     }
 
     public String getName() {

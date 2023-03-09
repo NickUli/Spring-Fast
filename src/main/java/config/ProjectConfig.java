@@ -14,6 +14,7 @@ public class ProjectConfig {
     Parrot parrot1() {
         Parrot parrot = new Parrot();
         parrot.setName("Koko");
+        System.out.println("Create bin parrot1 and set name Koko");
         return parrot;
     }
 
@@ -21,6 +22,7 @@ public class ProjectConfig {
     Parrot parrot2() {
         Parrot parrot = new Parrot();
         parrot.setName("Miki");
+        System.out.println("Create bin parrot2 width name bin miki and set name Miki");
         return parrot;
     }
 
@@ -29,16 +31,19 @@ public class ProjectConfig {
     Parrot parrot3() {
         Parrot parrot = new Parrot();
         parrot.setName("Riki");
+        System.out.println("Create primary bin parrot3 and set name Riki");
         return parrot;
     }
 
     @Bean
     String hello() {
+        System.out.println("Create String hello");
         return "Hello";
     }
 
     @Bean
     Integer ten() {
+        System.out.println("Create Integer 10");
         return 10;
     }
 }

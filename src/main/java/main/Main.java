@@ -27,10 +27,10 @@ public class Main {
         System.out.println(car.getName());
 
         Car superCar = new Car();
-        superCar.setName("Ferrari");
         Supplier<Car> carSupplier = () -> superCar;
         context.registerBean("ferrari", Car.class, carSupplier, bc -> bc.setPrimary(true));
-        Car ferrariCar = context.getBean("ferrari", Car.class);
+        Car ferrariCar = context.getBean(Car.class);
+        superCar.setName("Ferrari");
         System.out.println(ferrariCar.getName());
 
         String string = context.getBean(String.class);
